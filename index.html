@@ -49,7 +49,7 @@
                 </div>
                 <div class="navbar-end px-0 py-0 lg:px-4">
                         <img class="size-6" src="assets/coin.png" alt="coin">
-                        <a class="btn btn-ghost
+                        <a  id="account-balance" class="btn btn-ghost
                         text-xl font-medium">5500 BDT</a>
                 </div>
                     
@@ -60,8 +60,8 @@
         <!-- Banner starting -->
          <div class="my-12 ">
             <div class="navbar-center flex justify-center space-x-4">
-                <button class="btn  px-8 py-3 text-xl font-medium rounded-lg border-gray-300 bg-[#F9F7F3] ">Donation</button>
-                <button class="btn  px-8 py-3 text-xl font-medium rounded-lg border-gray-300 bg-[#F9F7F3] ">History</button>
+                <button id="show-donation-option" class="btn  px-8 py-3 text-xl font-medium rounded-lg border-gray-300 bg-[#F9F7F3] ">Donation</button>
+                <button id="show-transaction-history" class="btn  px-8 py-3 text-xl font-medium rounded-lg border-gray-300 bg-[#F9F7F3] ">History</button>
             </div>
          </div>
          <div class="divider "></div>
@@ -80,9 +80,9 @@
            </div>
           </div>
          </dialog>
-      <div>
+      <div class="donation-section">
        <!-- Noakhali Donation  -->
-       <div class="hero mx-auto p-8">
+       <div id="donation-noakhali" class="hero mx-auto p-8">
           <div class="hero-content flex-col lg:flex-row mx-auto">
             <div class="hero  rounded-2xl border">
 
@@ -111,8 +111,8 @@
                       supporting the relief efforts and making a positive
                       impact on the lives of those in need.
                     </p>
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full rounded-lg bg-transparent my-4 p-5" />
-                    <button id="btn" class="btn bg-[#B4F461] font-semibold text-xl rounded-lg flex text-center justify-center px-5 py-3 mx-auto" onclick="modal.showModal()">Donate Now</button>
+                    <input id="noakhali-input"  type="text" placeholder="Write Donation Amount" class="input input-bordered w-full rounded-lg bg-transparent my-4 p-5" />
+                    <button id="btn-noakhali" class="btn bg-[#B4F461] font-semibold text-xl rounded-lg flex text-center justify-center px-5 py-3 mx-auto" onclick="modal.showModal()">Donate Now</button>
                   </div>
               </div>
             </div>
@@ -121,7 +121,7 @@
        </div>
        
        <!-- Feni Donation -->
-       <div class="hero p-8 mx-auto ">
+       <div id="donation-feni" class="hero p-8 mx-auto ">
         <div class="hero-content flex-col lg:flex-row">
           <div class="hero rounded-2xl border">
 
@@ -144,8 +144,8 @@
                   <p class="py-4 font-light text-base">
                     The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
                   </p>
-                  <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full rounded-lg bg-transparent p-5 my-4" />
-                  <button id="btn" class="btn bg-[#B4F461]  font-semibold text-xl rounded-lg flex items-center justify-center px-5 py-3 mx-auto " onclick= "modal.showModal()">Donate Now</button>
+                  <input id="feni-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full rounded-lg bg-transparent p-5 my-4" />
+                  <button id="btn-feni" class="btn bg-[#B4F461]  font-semibold text-xl rounded-lg flex items-center justify-center px-5 py-3 mx-auto " onclick= "modal.showModal()">Donate Now</button>
                 </div>
             </div>
           </div>
@@ -155,7 +155,7 @@
        </div>
 
        <!-- Quota Donation -->
-       <div class="hero p-8 mx-auto">
+       <div id="donation-quota" class="hero p-8 mx-auto">
         <div class="hero-content flex-col lg:flex-row">
           <div class="hero rounded-2xl border ">
 
@@ -178,8 +178,8 @@
                   <p class="py-4 font-light text-base">
                     The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
                   </p>
-                  <input type="text" placeholder="Write Donation Amount" class="input input-bordered w-full rounded-lg bg-transparent my-4 p-5" />
-                  <button id="btn" class="btn bg-[#B4F461]  font-semibold text-xl rounded-lg mx-auto flex items-center justify-center px-5 py-3" onclick="modal.showModal()">Donate Now</button>
+                  <input id="quota-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full rounded-lg bg-transparent my-4 p-5" />
+                  <button id="btn-quota" class="btn bg-[#B4F461]  font-semibold text-xl rounded-lg mx-auto flex items-center justify-center px-5 py-3" onclick="modal.showModal()">Donate Now</button>
                 </div>
             </div>
           </div>
@@ -188,13 +188,22 @@
         </div>
        </div>
       </div>
+    <!-- Transaction start -->
+    <div>
+      <h2 id="transaction-history" class="hidden text-5xl text-center" >Transaction History</h2>
+      <div id="transaction-container" class="space-y-4">
 
+      </div>
+   </div>
+  <!-- transaction end -->
       
 
-      <!-- Javascript -->
-       <script src="js/button.js"></script>
-      <script src="js/donate.js"></script>
-    </main>
+   
     
+  </main>
+     <!-- Javascript --> 
+     <script src="js/donate.js"></script>
+     <script src="js/button.js"></script>
+     
 </body>
 </html>
