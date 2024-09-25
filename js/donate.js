@@ -130,7 +130,10 @@ document.getElementById('show-history')
 
     showSectionById('transaction-section');
     toggleActiveButton('show-history');
+
 });
+
+
 
 
 
