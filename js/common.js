@@ -35,8 +35,14 @@ function getTextFieldValueById(id){
     const amountValue = document.getElementById(id).innerText;
     const amountNumber = parseFloat(amountValue);
     return amountNumber;
-}
+};
 
+
+function toggleActiveButton(id) {
+   document.getElementById('show-donation').classList.remove('focus');
+   document.getElementById('show-history').classList.remove('focus');
+   document.getElementById(id).classList.add('focus');
+};
 
 function showSectionById(id){
     document.getElementById('donation-section').classList.add('hidden');
@@ -47,8 +53,4 @@ function showSectionById(id){
 };
 
 
-function toggleActiveButton(id) {
-   document.getElementById('show-donation').classList.remove('focus');
-   document.getElementById('show-history').classList.remove('focus');
-   document.getElementById(id).classList.add('focus');
-};
+
