@@ -6,6 +6,12 @@
     <title>Donate Bangladesh</title>
     <script src="question.html"></script>
 
+    <style>
+      .focus{
+      background-color: #B4F461; 
+      };
+    </style>
+
     <!-- Daisy UI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -14,7 +20,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-
 
 
     <!-- Customize  -->
@@ -37,9 +42,9 @@
 <body class="lexend">
     <header class="sticky backdrop-blur top-0 left-0 z-10">
         <!-- Navbar starting -->
-        <nav class="mb-2">
-            <div class="navbar bg-[#F9F7F3] px-2 py-4 mb-4">
-                <div class="navbar-start lg:py-8 lg:px-3">
+        <nav class="mb-2 ">
+            <div class="navbar bg-[#F9F7F3] mb-4">
+                <div class="navbar-start lg:py-4 lg:px-3">
                     <a href="question.html" class="btn bg-[#B4F461] font-semibold text-xl rounded-lg py-2 px-8">Blog</a>
                  </div>
                 <div class="navbar-center center">
@@ -47,7 +52,7 @@
                     <a class="btn btn-ghost text-xl font-semibold hidden  md:block py-2">
                      Donate Bangladesh</a>
                 </div>
-                <div class="navbar-end px-0 py-0 lg:px-4">
+                <div class="navbar-end flex items-center">
                         <img class="size-6" src="assets/coin.png" alt="coin">
                         <a  id="account-balance" class="btn btn-ghost
                         text-xl font-medium">5500 BDT</a>
@@ -60,8 +65,8 @@
         <!-- Banner starting -->
          <div class="my-12 ">
             <div class="navbar-center flex justify-center space-x-4">
-                <button id="show-donation-option" class="btn  px-8 py-3 text-xl font-medium rounded-lg border-gray-300 bg-[#F9F7F3] ">Donation</button>
-                <button id="show-transaction-history" class="btn  px-8 py-3 text-xl font-medium rounded-lg border-gray-300 bg-[#F9F7F3] ">History</button>
+                <button id="show-donation" class=" focus btn px-4 py-3 text-xl font-medium rounded-lg border-gray-300 bg-[#F9F7F3] ">Donation</button>
+                <button id="show-history" class="btn  px-8 py-3 text-xl font-medium rounded-lg border-gray-300 bg-[#F9F7F3] ">History</button>
             </div>
          </div>
          <div class="divider "></div>
@@ -76,13 +81,14 @@
            <p class="text-xl my-4">You have donated for humankind</p>
            <span class="text-2xl font-bold my-8">Successfully</span>
             <div class="modal-action">
-             <button id="btn-close" class=" mx-auto btn btn-ghost text-xl font-semibold bg-[#1111110D] flex items-center my-4"> close information</button>
+             <button id="btn-close" class=" mx-auto btn btn-ghost text-xl font-semibold bg-[#1111110D] flex items-center"> close information</button>
            </div>
           </div>
          </dialog>
-      <div class="donation-section">
+         <!--Donation Starting  -->
+      <div  id="donation-section">
        <!-- Noakhali Donation  -->
-       <div id="donation-noakhali" class="hero mx-auto p-8">
+       <div class="hero mx-auto p-2">
           <div class="hero-content flex-col lg:flex-row mx-auto">
             <div class="hero  rounded-2xl border">
 
@@ -111,7 +117,7 @@
                       supporting the relief efforts and making a positive
                       impact on the lives of those in need.
                     </p>
-                    <input id="noakhali-input"  type="text" placeholder="Write Donation Amount" class="input input-bordered w-full rounded-lg bg-transparent my-4 p-5" />
+                    <input id="noakhali-input" type="text" placeholder="Write Donation Amount" class="input input-bordered w-full rounded-lg bg-transparent my-4 p-5" />
                     <button id="btn-noakhali" class="btn bg-[#B4F461] font-semibold text-xl rounded-lg flex text-center justify-center px-5 py-3 mx-auto" onclick="modal.showModal()">Donate Now</button>
                   </div>
               </div>
@@ -121,7 +127,7 @@
        </div>
        
        <!-- Feni Donation -->
-       <div id="donation-feni" class="hero p-8 mx-auto ">
+       <div id="donation-feni" class="hero p-2 mx-auto ">
         <div class="hero-content flex-col lg:flex-row">
           <div class="hero rounded-2xl border">
 
@@ -155,7 +161,7 @@
        </div>
 
        <!-- Quota Donation -->
-       <div id="donation-quota" class="hero p-8 mx-auto">
+       <div id="donation-quota" class="hero p-2 mx-auto">
         <div class="hero-content flex-col lg:flex-row">
           <div class="hero rounded-2xl border ">
 
@@ -188,22 +194,38 @@
         </div>
        </div>
       </div>
-    <!-- Transaction start -->
-    <div>
-      <h2 id="transaction-history" class="hidden text-5xl text-center" >Transaction History</h2>
-      <div id="transaction-container" class="space-y-4">
 
+      <!-- Donation ending -->
+     <!-- Transaction start -->
+      <div id="transaction-section">
+        <!-- noakhali transaction -->
+        <div class="card mx-auto max-w-sm w-full md:max-w-screen-xl px-2 py-2    rounded-lg border border-gray-400 container md:m-5  space-x-2">
+          <h2 id="title-transaction1" class="px-2 py-2 lg:px-3 lg:py-3 text-2xl font-bold"></h2>
+          <div id="transaction-container1" class="px-2 py-2 lg:px-3 lg:py-3 text-lg md:text-xl font-semibold">
+          </div>
+        </div>
+        <!-- Feni transaction -->
+        <div class="card mx-auto max-w-sm w-full md:max-w-screen-xl px-2 py-2    rounded-lg border border-gray-400 container md:m-5  space-x-2">
+          <h2 id="title-transaction2" class="px-2 py-2 lg:px-3 lg:py-3 text-2xl font-bold"></h2>
+          <div id="transaction-container2" class="px-2 py-2 lg:px-3 lg:py-3 text-lg md:text-xl font-semibold">
+          </div>
+        </div>
+
+        <!-- Quota Transaction -->
+        <div  class="card mx-auto max-w-sm w-full md:max-w-screen-xl px-2 py-2 rounded-lg border border-gray-400 container md:m-5  space-x-2">
+          <h2 id="title-transaction3" class="px-2 py-2 lg:px-3 lg:py-3 text-2xl font-bold"></h2>
+          <div id="transaction-container3" class="px-2 py-2 lg:px-3 lg:py-3 text-lg md:text-xl font-semibold">
+          </div>
+         </div>
       </div>
-   </div>
   <!-- transaction end -->
       
 
    
     
   </main>
-     <!-- Javascript --> 
-     <script src="js/donate.js"></script>
-     <script src="js/button.js"></script>
-     
+    <!-- Javascript --> 
+    <script src="js/donate.js"></script>
+    <script src="js/common.js"></script>
 </body>
 </html>
