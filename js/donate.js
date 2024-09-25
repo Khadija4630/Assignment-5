@@ -125,22 +125,8 @@ document.getElementById('btn-quota')
 document.getElementById('show-donation')
 .addEventListener('click' ,function(){
 
-    toggleActiveButton('show-donation');
-    
-
-});
-
-document.getElementById('show-donation')
-.addEventListener('click', function() {
-
     showSectionById('donation-section');
-    
-});
-
-document.getElementById('show-history')
-.addEventListener('click', function(){
-
-    toggleActiveButton('show-history');
+    toggleActiveButton('show-donation');
     
 
 });
@@ -152,4 +138,10 @@ document.getElementById('show-history')
 });
 
 
+document.getElementById('show-history')
+.addEventListener('click', function(){
 
+    toggleActiveButton('show-history');
+    
+
+});
