@@ -27,6 +27,8 @@ document.getElementById('btn-noakhali')
 
        const newCash =balan - addMoney;
        document.getElementById('account-balance').innerText =newCash;
+
+       document.getElementById("noakhali-input").value="";
     }
     else{
         alert('Invalid Input');
@@ -67,6 +69,7 @@ document.getElementById('btn-feni')
        const newCash= balan - addMoney;
        document.getElementById('account-balance').innerText =newCash;
 
+       document.getElementById("feni-input").value="";
     }
     else{
         alert('Invalid Input');
@@ -105,6 +108,8 @@ document.getElementById('btn-quota')
        const newCash = balan - addMoney;
        document.getElementById('account-balance').innerText =newCash;
 
+       document.getElementById("quota-input").value="";
+
     }
     else{
         alert('Invalid Input');
@@ -121,6 +126,7 @@ document.getElementById('show-donation')
 .addEventListener('click' ,function(){
 
     toggleActiveButton('show-donation');
+    
 
 });
 
@@ -135,6 +141,7 @@ document.getElementById('show-history')
 .addEventListener('click', function(){
 
     toggleActiveButton('show-history');
+    
 
 });
 
