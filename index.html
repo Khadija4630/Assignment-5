@@ -6,12 +6,6 @@
     <title>Donate Bangladesh</title>
     <script src="question.html"></script>
 
-    <style>
-      .focus{
-      background-color: #B4F461; 
-      };
-    </style>
-
     <!-- Daisy UI CDN -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -21,6 +15,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
+
+    <!-- Button color active -->
+    <style>
+      .focus{
+      background-color: #B4F461; 
+      transition:0.5s;
+      transition-timing-function:ease ;
+      }
+    </style>
 
     <!-- Customize  -->
     <script>
@@ -65,8 +68,8 @@
         <!-- Banner starting -->
          <div class="my-12 ">
             <div class="navbar-center flex justify-center space-x-4">
-                <button id="show-donation" class=" focus btn px-4 py-3 text-xl font-medium rounded-lg border-gray-300 bg-[#F9F7F3] ">Donation</button>
-                <button id="show-history" class="btn  px-8 py-3 text-xl font-medium rounded-lg border-gray-300 bg-[#F9F7F3] ">History</button>
+                <button id="show-donation" class=" focus px-4 py-3 text-xl font-medium rounded-lg border-gray-300 border-solid border-2 ">Donation</button>
+                <button id="show-history" class=" focus  px-8 py-3 text-xl font-medium rounded-lg border-gray-300 border-solid border-2">History</button>
             </div>
          </div>
          <div class="divider "></div>
@@ -196,23 +199,24 @@
       </div>
 
       <!-- Donation ending -->
+       
      <!-- Transaction start -->
-      <div id="transaction-section">
+      <div id=" transaction-section">
         <!-- noakhali transaction -->
-        <div class="card mx-auto max-w-sm w-full md:max-w-screen-xl px-2 py-2    rounded-lg border border-gray-400 container md:m-5  space-x-2">
+        <div class="card mx-auto max-w-sm w-full md:max-w-screen-xl py-2 rounded-lg border border-gray-400 container md:m-5 space-x-2">
           <h2 id="title-transaction1" class="px-2 py-2 lg:px-3 lg:py-3 text-2xl font-bold"></h2>
           <div id="transaction-container1" class="px-2 py-2 lg:px-3 lg:py-3 text-lg md:text-xl font-semibold">
           </div>
         </div>
         <!-- Feni transaction -->
-        <div class="card mx-auto max-w-sm w-full md:max-w-screen-xl px-2 py-2    rounded-lg border border-gray-400 container md:m-5  space-x-2">
+        <div class="card mx-auto max-w-sm w-full md:max-w-screen-xl  py-2    rounded-lg border border-gray-400 container md:m-5  space-x-2">
           <h2 id="title-transaction2" class="px-2 py-2 lg:px-3 lg:py-3 text-2xl font-bold"></h2>
           <div id="transaction-container2" class="px-2 py-2 lg:px-3 lg:py-3 text-lg md:text-xl font-semibold">
           </div>
         </div>
 
         <!-- Quota Transaction -->
-        <div  class="card mx-auto max-w-sm w-full md:max-w-screen-xl px-2 py-2 rounded-lg border border-gray-400 container md:m-5  space-x-2">
+        <div  class="card mx-auto max-w-sm w-full md:max-w-screen-xl py-2 rounded-lg border border-gray-400 container md:m-5  space-x-2">
           <h2 id="title-transaction3" class="px-2 py-2 lg:px-3 lg:py-3 text-2xl font-bold"></h2>
           <div id="transaction-container3" class="px-2 py-2 lg:px-3 lg:py-3 text-lg md:text-xl font-semibold">
           </div>

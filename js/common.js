@@ -47,9 +47,8 @@ function showSectionById(id){
 };
 
 
-
-// function toggleActiveButton(id) {
-//    document.getElementById('show-donation').classList.remove('active');
-//    document.getElementById('show-history').classList.remove('active');
-//    document.getElementById(id).classList.add('active');
-// };
+function toggleActiveButton(id) {
+   document.getElementById('show-donation').classList.remove('focus');
+   document.getElementById('show-history').classList.remove('focus');
+   document.getElementById(id).classList.add('focus');
+};
