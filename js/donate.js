@@ -135,13 +135,5 @@ document.getElementById('show-donation')
 document.getElementById('show-history')
 .addEventListener('click', function() {
     showSectionById('transaction-section');
-});
-
-
-document.getElementById('show-history')
-.addEventListener('click', function(){
-
     toggleActiveButton('show-history');
-    
-
 });
